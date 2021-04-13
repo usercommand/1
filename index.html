@@ -30,8 +30,14 @@ p {
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+ <a href="#" id="playvideo">Play button</a>
+    <script>
+     $("#playvideo").click(function(){
+      $("#video1")[0].src += "?autoplay=1";
+     });
+    </script>
 <h3 style="text-align:center;"><p style="color:white;font-size:30px;">E023</p></h3>
-<h3 style="text-align:center;"><iframe src="https://vivo.sx/embed/c9a32e6ce7" width="1400" height="787,5" scrolling="yes" frameborder="0" allowfullscreen></iframe></h3>
+<h3 style="text-align:center;"><iframe id="video1" src="https://vivo.sx/embed/c9a32e6ce7" width="1400" height="787,5" scrolling="yes" frameborder="0" allowfullscreen></iframe></h3>
 <h3 style="text-align:center;"><p style="color:white;font-size:30px;">E024</p></h3>
 <h3 style="text-align:center;"><iframe src="https://vivo.sx/embed/af4802abf1" width="1400" height="787,5" scrolling="yes" frameborder="0" allowfullscreen></iframe></h3>
 <h3 style="text-align:center;"><p style="color:white;font-size:30px;">E025</p></h3>

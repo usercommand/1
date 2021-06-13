@@ -18,3 +18,16 @@ p {
 <video width="600" height="400" controls>
         <source src="https://e15.dotice.me/plyvivo/musedibasuco5o2uti5u/chunklist.m3u8" type="application/x-mpegURL">
     </video>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<video id="video"></video>
+<script>
+  if(Hls.isSupported()) {
+    var video = document.getElementById('video');
+    var hls = new Hls();
+    hls.loadSource('https://e15.dotice.me/plyvivo/musedibasuco5o2uti5u/chunklist.m3u8');
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED,function() {
+      video.play();
+  });
+ }
+</script>

@@ -4,14 +4,36 @@
 </head>
 <style>
 body {
-background-color: #f9ffff
+background-color: #3D3D3D
 }
 p {
     background-color: #FFFFFF);
 }
 </style>
-<title>hh </title>
+<title> </title>
 
-<h3 style="text-align:center;"> df<p style="color:white;font-size:30px;"> hj</p></h3>
-<iframe frameborder=0 height=100% width=100% src="http://liveonscore.tv/streams/9722974" allowfullscreen scrolling=no allowtransparency></iframe>
+<h3 style="text-align:center;"> df<p style="color:white;font-size:30px;"></p></h3>
+ <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <video id="video" controls></video>
+    <script>
+    if(Hls.isSupported())
+    {
+        var video = document.getElementById('video');
+        var hls = new Hls();
+        hls.loadSource('https://d1m7jfoe9zdc1j.cloudfront.net/b2fa33154a0ac7d96bbe_heisuten_45026751517_1641338158/chunked/index-dvr.m3u8');
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED,function()
+        {
+            video.play();
+        });
+    }
+    else if (video.canPlayType('application/vnd.apple.mpegurl'))
+    {
+        video.src = 'playlist.m3u8';
+        video.addEventListener('canplay',function()
+        {
+            video.play();
+        });
+    }
+    </script>
 </html>

@@ -12,34 +12,10 @@ p {
 </style>
 <title> </title>
 
-<h3 style="text-align:center;"><p style="color:white;font-size:30px;">ufukifufuzcdxtdhfjcdjzhdjzdcz</p></h3>
- <<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-<!-- Or if you want a more recent alpha version -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@alpha"></script> -->
-<video id="video"></video>
-<script>
-  var video = document.getElementById('video');
-  var videoSrc = 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8';
-  if (Hls.isSupported()) {
-    var hls = new Hls();
-    hls.loadSource(videoSrc);
-    hls.attachMedia(video);
-  }
-  // HLS.js is not supported on platforms that do not have Media Source
-  // Extensions (MSE) enabled.
-  //
-  // When the browser has built-in HLS support (check using `canPlayType`),
-  // we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video
-  // element through the `src` property. This is using the built-in support
-  // of the plain video element, without using HLS.js.
-  //
-  // Note: it would be more normal to wait on the 'canplay' event below however
-  // on Safari (where you are most likely to find built-in HLS support) the
-  // video.src URL must be on the user-driven white-list before a 'canplay'
-  // event will be emitted; the last video event that can be reliably
-  // listened-for when the URL is not on the white-list is 'loadedmetadata'.
-  else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = videoSrc;
-  }
-</script>
+<h3 style="text-align:center;"><p style="color:white;font-size:30px;"></p></h3>
+<a data-type="countdown" 
+   data-id="3280757" class="tickcounter" style="display: block; width: 100%; position: relative; padding-bottom: 25%" title="Countdown" href="//www.tickcounter.com/">Countdown</a>
+    <script>
+        (function(d, s, id) { var js, pjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//www.tickcounter.com/static/js/loader.js"; pjs.parentNode.insertBefore(js, pjs); }(document, "script", "tickcounter-sdk"));
+    </script>
 </html>
